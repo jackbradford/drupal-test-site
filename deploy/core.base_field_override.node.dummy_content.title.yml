@@ -1,0 +1,18 @@
+uuid: d52d628a-0d2b-4b1d-acce-35de611ab571
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dummy_content
+id: node.dummy_content.title
+field_name: title
+entity_type: node
+bundle: dummy_content
+label: 'Dummy Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

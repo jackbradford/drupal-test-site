@@ -1,0 +1,23 @@
+uuid: 1258782b-8029-4e98-8feb-765ea475c4ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prioce
+    - node.type.dummy_content
+id: node.dummy_content.field_prioce
+field_name: field_prioce
+entity_type: node
+bundle: dummy_content
+label: Price
+description: Price
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

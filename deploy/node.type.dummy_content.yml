@@ -1,0 +1,18 @@
+uuid: e6a332fe-0de5-4223-b163-e0a1e24da5e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Dummy Content'
+type: dummy_content
+description: 'Dummy Content'
+help: Dumdum
+new_revision: true
+preview_mode: 1
+display_submitted: true
