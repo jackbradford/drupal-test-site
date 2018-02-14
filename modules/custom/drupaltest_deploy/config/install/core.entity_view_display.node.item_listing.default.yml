@@ -1,0 +1,35 @@
+# core.entity_view_display.node.item_listing.default.yml
+#
+# This file tells Drupal how the content of the custom content type 
+# "item_listing" should be displayed by default.
+#
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.item_listing.field_listing_title
+        - field.field.node.item_listing.field_listing_condition_note
+        - node.type.item_listing
+    module:
+        - text
+        - user
+id: node.item_listing.default
+targetEntityType: node
+bundle: item_listing
+mode: default
+content:
+    field_listing_title:
+        label: hidden
+        type: text_default
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+    field_listing_condition_note:
+        label: above
+        type: text_default
+        weight: 102
+        settings: { }
+        third_party_settings: { }
+    links:
+        weight: 100
+hidden: {  }

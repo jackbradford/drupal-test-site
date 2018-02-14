@@ -1,0 +1,27 @@
+# field.field.node.item_listing.field_listing_title.yml
+#
+# This file adds the "field_listing_title" field to the
+# content type "item_listing."
+#
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.field_listing_title
+        - node.type.item_listing
+    module:
+        - text
+id: node.item_listing.field_listing_title
+field_name: field_listing_title
+entity_type: node
+bundle: item_listing
+label: "Listing Title"
+description: "The title for your advertisement."
+required: true
+translatable: true
+default_value: { }
+default_value_callback: ''
+settings:
+    display_summary: true
+field_type: text_with_summary
+

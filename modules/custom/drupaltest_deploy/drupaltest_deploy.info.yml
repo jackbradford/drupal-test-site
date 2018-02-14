@@ -1,0 +1,6 @@
+name: "Drupal Test Site Deployment"
+type: module
+description: "Initial deployment module used to create a new instance of the project."
+core: 8.x
+version: "8.x-1.x-dev"
+

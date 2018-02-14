@@ -1,0 +1,27 @@
+# field.field.node.item_listing.field_listing_condition_note.yml
+#
+# This file adds the "field_listing_condition_note" field to the
+# content type "item_listing."
+#
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.field_listing_condition_note
+        - node.type.item_listing
+    module:
+        - text
+id: node.item_listing.field_listing_condtion_note
+field_name: field_listing_condition_note
+entity_type: node
+bundle: item_listing
+label: "Condition Note"
+description: "Describes the functional and cosmetic status of the item."
+required: true
+translatable: true
+default_value: { }
+default_value_callback: ''
+settings:
+    display_summary: true
+field_type: text
+

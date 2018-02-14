@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Install file for Drupal Test Site Deployment
+ */
+
+/**
+ * Implements hook_install()
+ */
+function drupaltest_deploy_install() {
+
+	/**
+	 * This module is designed to be enabled on a brand new instance of Drupal.
+	 * Setting its UUID here will tell this instance that it's actually the
+	 * same site as the other instances. All instances, therefore, will have
+	 * the same UUID, allowing us to sync them via the configuration managment
+	 * system.
+	 */
+	drupaltest_deploy_set_uuid('d8c807ae-a14e-4485-bd5c-5458671a2659');
+	for  ($i=8001 ; $i<9000 ; $i++) {
+
+		$candidate	=	'drupaltest_deploy_update_' . $i;
+		if (function_exists($candidate)) {
+			$candidate();
+		}
+	}
+}
+
+/**
+ * Update dependencies and revert features.
+ * Implements hook_update_n()
+ */
+function drupaltest_deploy_update_8001() {
+
+	/**
+	 * If you add a new dependency during development:
+	 * (1) add dependency to .info file.
+	 * (2) increment the number in this function name.
+	 * (3) on each target environment, run drush updb -y to call the
+	 * 		drupaltest_deploy_update_dependencies() function, which
+	 * 		enables all new dependencies.
+	 */
+	drupaltest_deploy_update_dependencies();
+}
+

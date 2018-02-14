@@ -1,0 +1,39 @@
+# core.entity_view_display.node.item_listing.teaser.yml
+#
+# This file tells Drupal how the "teaser" of custom content type
+# "item_listing" should be displayed.
+#
+# What's a "teaser?"
+#
+langcode: en
+status: true
+dependencies:
+    config:
+        - core.entity_view_mode.node.teaser
+        - field.field.node.item_listing.field_listing_title
+        - field.field.node.item_listing.field_listing_condition_note
+        - node.type.item_listing
+    module:
+        - text
+        - user
+id: node.item_listing.teaser
+targetEntityType: node
+bundle: item_listing
+mode: teaser
+content:
+    field_listing_title:
+        label: hidden
+        type: text_summary_or_trimmed
+        weight: 101
+        settings:
+            trim_length: 600
+        third_party_settings: {  }
+    field_listing_condition_note:
+        label: above
+        type: text_summary_or_trimmed
+        weight: 102
+        settings: { }
+        third_party_settings: { }
+    links:
+        weight: 100
+hidden: {  }

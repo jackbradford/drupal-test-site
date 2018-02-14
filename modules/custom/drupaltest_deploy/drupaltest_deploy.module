@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Module file for Drupal Test Site Deployment
+ */
+
+use Drupal\Core\Extension\InfoParser;
+
+/**
+ * Updates dependencies based on the drupaltest_deploy .info file.
+ *
+ * If, during development, you add a dependency to drupaltest_deploy's .info
+ * file, increment the update hook (see the .install file) and this function
+ * will be called, making sure dependencies are enabled.
+ */
+function drupaltest_deploy_update_dependencies() {
+
+	$parser		=	new InfoParser;
+	$infoFile	=	$parser->parse(drupal_get_path('module', 'drupaltest_deploy') . '/drupaltest_deploy.info.yml');
+	if (isset($infoFile['dependencies'])) {
+
+		\Drupal::service('module_installer')->install($infoFile['dependencies'], TRUE);
+	}
+}
+
+/**
+ * Set the UUID of the site.
+ *
+ * By default, reinstalling a site assigns it a new random UUID, which makes
+ * syncing the configuration with other instances impossible. This function
+ * is called by drupaltest_deploy's .install hook.
+ *
+ * @param $uuid
+ * 	A uuid string, for example 'e732b460-add4-47a7-8c00-e4dedbb42900'.
+ */
+function drupaltest_deploy_set_uuid($uuid) {
+
+	\Drupal::configFactory()->getEditable('system.site')
+		->set('uuid', $uuid)
+		->save();
+}
+
