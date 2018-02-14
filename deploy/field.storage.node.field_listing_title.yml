@@ -1,0 +1,24 @@
+uuid: 6c7af9a4-9cfa-480e-b4ce-aff71c896b22
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - drupaltest_deploy
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: E8QHaNrhKLnP0PJ6Xx1rd5xEic12b_5xXfrvkwJQKYY
+id: node.field_listing_title
+field_name: field_listing_title
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

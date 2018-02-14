@@ -1,0 +1,25 @@
+uuid: 2d96ce86-012b-4a1d-bff8-0235c0dddd06
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - drupaltest_deploy
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: h5l0QRaD8GOBjy2rPH6n_aN7AAoQ1FaOme0CIEy99Ig
+id: node.field_listing_condition_note
+field_name: field_listing_condition_note
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

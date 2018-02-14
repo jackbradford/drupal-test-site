@@ -1,0 +1,16 @@
+uuid: 3b1afe17-7159-4e7f-87e9-81fe656b922e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - drupaltest_deploy
+_core:
+  default_config_hash: Zb8pnSLyM4MEm0FT8BVpkT41JIOCRhQ5kmpQzcAijLY
+name: 'Item Listing'
+type: item_listing
+description: 'Item listings can be used to advertise inventory assets, services, or products.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

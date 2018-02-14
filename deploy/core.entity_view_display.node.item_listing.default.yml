@@ -1,0 +1,36 @@
+uuid: d3f464ba-894c-43e0-ac7a-2f311c931d28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.item_listing.field_listing_condition_note
+    - field.field.node.item_listing.field_listing_title
+    - node.type.item_listing
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: SdpU3Kx47CbZSUUyzwHt-_TDORGyNn5zhrGWCsFxkqc
+id: node.item_listing.default
+targetEntityType: node
+bundle: item_listing
+mode: default
+content:
+  field_listing_condition_note:
+    label: above
+    type: text_default
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_listing_title:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

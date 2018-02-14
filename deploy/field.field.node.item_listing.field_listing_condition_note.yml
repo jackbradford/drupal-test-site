@@ -1,0 +1,23 @@
+uuid: 3cacb0c1-35b5-43d8-ad1a-cb46d7d37f04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing_condition_note
+    - node.type.item_listing
+  module:
+    - text
+_core:
+  default_config_hash: H0BIMjo4YCmjse1nnUBhrrmU5QXdOHR622J0wma_mkc
+id: node.item_listing.field_listing_condition_note
+field_name: field_listing_condition_note
+entity_type: node
+bundle: item_listing
+label: 'Condition Note'
+description: 'Describes the functional and cosmetic status of the item.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
