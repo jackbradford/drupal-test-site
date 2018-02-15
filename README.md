@@ -12,13 +12,12 @@ instance of the site anywhere and at any point in time.
 
 Follow these steps to deploy a new instance of this site:
 
-1. Create a directory for the project. `cd` to that directory.
-1. Run `git clone https://github.com/jackbradford/drupal-test-site.git .`.
-1. Run `scripts/initial_deploy.sh`.
-1. You'll be asked for the "Drupal Root." Enter `drupal`, which is automatically
-   created in the current directory.
+1. Create and enter a directory for the project.
+1. Run `git clone https://github.com/jackbradford/drupal-test-site.git .`
+1. Run `scripts/initial_deploy.sh`
+1. You'll be asked to specify the "Drupal Root." Enter `drupal`, which has been
+   created automatically.
 1. Follow the rest of the prompts. The script will exit on failure. If such a
-   failure occurs, I've found it easiest to scrap the whole directory and
-   recreate it, then start the process over from scratch.
-1. Assuming the script completes, the site deployed successfully.
+   failure occurs, it may be easiest to start the process again from scratch.
+1. If the script completes without error, the site deployed successfully.
 
